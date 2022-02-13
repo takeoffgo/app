@@ -5,6 +5,14 @@ PODS:
   - Apollo/SQLite (0.50.0):
     - Apollo/Core
     - SQLite.swift (~> 0.13.1)
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+    - AppCenter/Core
   - SQLite.swift (0.13.2):
     - SQLite.swift/standard (= 0.13.2)
   - SQLite.swift/standard (0.13.2)
@@ -12,16 +20,19 @@ PODS:
 DEPENDENCIES:
   - Apollo
   - Apollo/SQLite
+  - AppCenter
 
 SPEC REPOS:
   trunk:
     - Apollo
+    - AppCenter
     - SQLite.swift
 
 SPEC CHECKSUMS:
   Apollo: 5e4476a3236bd576686085b7cd99655c788e4d74
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
 
-PODFILE CHECKSUM: 1663247d0ab6365ba63f99979f4d1cf82c551b36
+PODFILE CHECKSUM: 52c07c96cc6fd0a072365952ddf44cd4db1c03e1
 
 COCOAPODS: 1.11.2

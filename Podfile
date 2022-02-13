@@ -7,5 +7,6 @@ target 'Take Off Go' do
 
   pod "Apollo"
   pod "Apollo/SQLite"
+  pod "AppCenter"
 
 end
