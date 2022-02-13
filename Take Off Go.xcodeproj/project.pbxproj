@@ -7,18 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C67385FE27B4919400FF62B6 /* Take_Off_GoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67385FD27B4919400FF62B6 /* Take_Off_GoApp.swift */; };
-		C673860027B4919400FF62B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67385FF27B4919400FF62B6 /* ContentView.swift */; };
+		AE10B00D97C8E0AB52842282 /* Pods_Take_Off_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D517010A391C561A6CA7D5 /* Pods_Take_Off_Go.framework */; };
+		C61ECB1E27B4B5F80074C388 /* GetQuote.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C61ECB1D27B4B5F80074C388 /* GetQuote.graphql */; };
+		C61ECB2327B4B6D30074C388 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C61ECB2227B4B6D30074C388 /* schema.json */; };
+		C61ECB2527B4B7180074C388 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61ECB2427B4B7180074C388 /* API.swift */; };
+		C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D7D27B747CA000F31A1 /* TripViewModel.swift */; };
+		C6724D8627B75A64000F31A1 /* TripListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRow.swift */; };
+		C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8727B75A7E000F31A1 /* TripListViewModel.swift */; };
+		C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8927B75A9D000F31A1 /* ImportTripView.swift */; };
+		C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */; };
 		C673860227B4919500FF62B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C673860127B4919500FF62B6 /* Assets.xcassets */; };
 		C673860527B4919500FF62B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C673860427B4919500FF62B6 /* Preview Assets.xcassets */; };
+		C69E69FB27B8F87900FD9B12 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69E69FA27B8F87900FD9B12 /* PropertyView.swift */; };
+		C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */; };
+		C6AAAE6627B8A91F00652796 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AAAE6527B8A91F00652796 /* Extensions.swift */; };
+		C6C7B04A27B76EAE00E023D9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7B04927B76EAE00E023D9 /* SampleData.swift */; };
+		C6D4758427B4E1080093206B /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D4758327B4E1080093206B /* TripDetail.swift */; };
+		C6D613F027B4BA2400A77938 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613EF27B4BA2400A77938 /* Network.swift */; };
+		C6D613F527B4C0D300A77938 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613F427B4C0D300A77938 /* TripList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D517010A391C561A6CA7D5 /* Pods_Take_Off_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Off_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B3BF6EB817E02F3DEAB736 /* Pods-Take Off Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Off Go.debug.xcconfig"; path = "Target Support Files/Pods-Take Off Go/Pods-Take Off Go.debug.xcconfig"; sourceTree = "<group>"; };
+		C61ECB1D27B4B5F80074C388 /* GetQuote.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetQuote.graphql; sourceTree = "<group>"; };
+		C61ECB2227B4B6D30074C388 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		C61ECB2427B4B7180074C388 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C6724D7D27B747CA000F31A1 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		C6724D8527B75A64000F31A1 /* TripListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRow.swift; sourceTree = "<group>"; };
+		C6724D8727B75A7E000F31A1 /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
+		C6724D8927B75A9D000F31A1 /* ImportTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTripView.swift; sourceTree = "<group>"; };
 		C67385FA27B4919400FF62B6 /* Take Off Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Off Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C67385FD27B4919400FF62B6 /* Take_Off_GoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_Off_GoApp.swift; sourceTree = "<group>"; };
-		C67385FF27B4919400FF62B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeOffGoApp.swift; sourceTree = "<group>"; };
 		C673860127B4919500FF62B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C673860427B4919500FF62B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C69E69FA27B8F87900FD9B12 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
+		C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewView.swift; sourceTree = "<group>"; };
+		C6AAAE6527B8A91F00652796 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C6C7B04927B76EAE00E023D9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		C6D4758327B4E1080093206B /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
+		C6D613EF27B4BA2400A77938 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C6D613F427B4C0D300A77938 /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
+		E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Off Go.release.xcconfig"; path = "Target Support Files/Pods-Take Off Go/Pods-Take Off Go.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +56,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE10B00D97C8E0AB52842282 /* Pods_Take_Off_Go.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C14E3C7C72BF162F137E7D7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17D517010A391C561A6CA7D5 /* Pods_Take_Off_Go.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C61ECB1C27B4B5D10074C388 /* Jambo */ = {
+			isa = PBXGroup;
+			children = (
+				C61ECB2427B4B7180074C388 /* API.swift */,
+				C6D613EF27B4BA2400A77938 /* Network.swift */,
+				C61ECB1D27B4B5F80074C388 /* GetQuote.graphql */,
+			);
+			path = Jambo;
+			sourceTree = "<group>";
+		};
+		C6724D7B27B747B2000F31A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6AAAE6527B8A91F00652796 /* Extensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6724D7C27B747B7000F31A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6724D8927B75A9D000F31A1 /* ImportTripView.swift */,
+				C6D4758327B4E1080093206B /* TripDetail.swift */,
+				C6D613F427B4C0D300A77938 /* TripList.swift */,
+				C6724D8527B75A64000F31A1 /* TripListRow.swift */,
+				C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */,
+				C69E69FA27B8F87900FD9B12 /* PropertyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6724D8427B74A86000F31A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C6724D7D27B747CA000F31A1 /* TripViewModel.swift */,
+				C6724D8727B75A7E000F31A1 /* TripListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C67385F127B4919400FF62B6 = {
 			isa = PBXGroup;
 			children = (
 				C67385FC27B4919400FF62B6 /* Take Off Go */,
 				C67385FB27B4919400FF62B6 /* Products */,
+				D728FE7D74DA20344F20AE19 /* Pods */,
+				C14E3C7C72BF162F137E7D7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +132,14 @@
 		C67385FC27B4919400FF62B6 /* Take Off Go */ = {
 			isa = PBXGroup;
 			children = (
-				C67385FD27B4919400FF62B6 /* Take_Off_GoApp.swift */,
-				C67385FF27B4919400FF62B6 /* ContentView.swift */,
+				C61ECB2227B4B6D30074C388 /* schema.json */,
+				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
 				C673860127B4919500FF62B6 /* Assets.xcassets */,
+				C61ECB1C27B4B5D10074C388 /* Jambo */,
+				C6724D7B27B747B2000F31A1 /* Models */,
 				C673860327B4919500FF62B6 /* Preview Content */,
+				C6724D8427B74A86000F31A1 /* ViewModels */,
+				C6724D7C27B747B7000F31A1 /* Views */,
 			);
 			path = "Take Off Go";
 			sourceTree = "<group>";
@@ -63,8 +148,18 @@
 			isa = PBXGroup;
 			children = (
 				C673860427B4919500FF62B6 /* Preview Assets.xcassets */,
+				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D728FE7D74DA20344F20AE19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74B3BF6EB817E02F3DEAB736 /* Pods-Take Off Go.debug.xcconfig */,
+				E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C673860827B4919500FF62B6 /* Build configuration list for PBXNativeTarget "Take Off Go" */;
 			buildPhases = (
+				3861278D693CB55CD7056542 /* [CP] Check Pods Manifest.lock */,
+				C61ECB1F27B4B64E0074C388 /* Generate Apollo GraphQL API */,
 				C67385F627B4919400FF62B6 /* Sources */,
 				C67385F727B4919400FF62B6 /* Frameworks */,
 				C67385F827B4919400FF62B6 /* Resources */,
+				3B8D4D1931BD835B21FCB2EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,20 +223,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61ECB2327B4B6D30074C388 /* schema.json in Resources */,
 				C673860527B4919500FF62B6 /* Preview Assets.xcassets in Resources */,
+				C61ECB1E27B4B5F80074C388 /* GetQuote.graphql in Resources */,
 				C673860227B4919500FF62B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3861278D693CB55CD7056542 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Take Off Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B8D4D1931BD835B21FCB2EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Take Off Go/Pods-Take Off Go-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Take Off Go/Pods-Take Off Go-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Take Off Go/Pods-Take Off Go-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C61ECB1F27B4B64E0074C388 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/YourTarget/**/*.graphql",
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C67385F627B4919400FF62B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C673860027B4919400FF62B6 /* ContentView.swift in Sources */,
-				C67385FE27B4919400FF62B6 /* Take_Off_GoApp.swift in Sources */,
+				C6D613F527B4C0D300A77938 /* TripList.swift in Sources */,
+				C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */,
+				C6D4758427B4E1080093206B /* TripDetail.swift in Sources */,
+				C61ECB2527B4B7180074C388 /* API.swift in Sources */,
+				C6D613F027B4BA2400A77938 /* Network.swift in Sources */,
+				C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */,
+				C6C7B04A27B76EAE00E023D9 /* SampleData.swift in Sources */,
+				C6AAAE6627B8A91F00652796 /* Extensions.swift in Sources */,
+				C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */,
+				C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */,
+				C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */,
+				C69E69FB27B8F87900FD9B12 /* PropertyView.swift in Sources */,
+				C6724D8627B75A64000F31A1 /* TripListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +435,7 @@
 		};
 		C673860927B4919500FF62B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74B3BF6EB817E02F3DEAB736 /* Pods-Take Off Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,6 +448,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -282,16 +456,17 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.takeoffgo.app.Take-Off-Go";
+				PRODUCT_BUNDLE_IDENTIFIER = com.takeoffgo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C673860A27B4919500FF62B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +479,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,11 +487,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.takeoffgo.app.Take-Off-Go";
+				PRODUCT_BUNDLE_IDENTIFIER = com.takeoffgo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

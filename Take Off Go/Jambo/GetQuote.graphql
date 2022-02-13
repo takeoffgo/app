@@ -1,0 +1,126 @@
+query GetQuote($key: String!) {
+  quote: quotePublic(key: $key) {
+    id
+    status
+    start
+    duration
+    travellerCount
+    total
+    baseCurrency
+    inclusions
+    exclusions
+    expires
+    locked
+    hero {
+      title
+      subtitle
+      image {
+        hash
+      }
+    }
+    user {
+      lastName
+      firstName
+      email
+      phone
+      genderPreposition
+    }
+    trip {
+      name
+      agency {
+        name
+        logo {
+          hash
+        }
+      }
+      agencyMember {
+        lastName
+        firstName
+        phone
+        email
+        genderPreposition
+      }
+      tripFlights(orderBy: DEPARTURE_ASC) {
+        nodes {
+          id
+          arrival
+          carrier
+          departure
+          number
+          departureAirport {
+            id
+            latitude
+            longitude
+            iata
+            icao
+            timezone
+            city
+            country {
+              name
+            }
+          }
+          arrivalAirport {
+            id
+            latitude
+            longitude
+            iata
+            icao
+            timezone
+            city
+            country {
+              name
+            }
+          }
+        }
+      }
+    }
+
+    days: quoteDaysByQuoteId(orderBy: ORDER_ASC) {
+      nodes {
+        id
+        date
+        order
+        activitySummary
+        activityDetail
+        accommodationId
+        quoteDayDestinationsByDayId(orderBy: ORDER_ASC) {
+          nodes {
+            order
+            destination {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+
+    accommodation: quoteAccommodationDetailsByQuoteId(orderBy: ORDER_ASC) {
+      nodes {
+        id
+        order
+        basis
+        confirmation
+        beverageInclusions
+        foodInclusions
+        roomType
+        property {
+          id
+          name
+          summary
+          latitude
+          longitude
+          heroMedia {
+            hash
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation TrackQuoteView($key: String!, $viewType: String!) {
+  trackQuoteView(input: { key: $key, viewType: $viewType }) {
+    success
+  }
+}
