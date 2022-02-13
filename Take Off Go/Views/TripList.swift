@@ -40,9 +40,13 @@ struct TripList: View {
                                 isAdding = false
                                 importTripKey = ""
                             }
+                            .disabled(importTripKey.isEmpty)
                         }
                     }
             }
+        }
+        .refreshable {
+            model.refresh()
         }
     }
 }

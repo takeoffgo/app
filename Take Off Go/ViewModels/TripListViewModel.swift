@@ -48,4 +48,10 @@ final class TripListViewModel: ObservableObject {
 
         fetchTrips()
     }
+
+    func refresh() {
+        for trip in trips {
+            trip.reload()
+        }
+    }
 }

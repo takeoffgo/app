@@ -1,3 +1,4 @@
+import Apollo
 import Foundation
 
 class TripViewModel: Identifiable, ObservableObject {
@@ -20,10 +21,10 @@ class TripViewModel: Identifiable, ObservableObject {
         self.error = error
     }
 
-    private func load() {
+    private func load(cachePolicy: CachePolicy = .default) {
         loading = true
 
-        Network.shared.apollo.fetch(query: GetQuoteQuery(key: id)) { result in
+        Network.shared.apollo.fetch(query: GetQuoteQuery(key: id), cachePolicy: cachePolicy) { result in
             switch result {
             case .success(let graphQLResult):
                 self.quote = graphQLResult.data?.quote
@@ -35,5 +36,9 @@ class TripViewModel: Identifiable, ObservableObject {
             }
             self.loading = false
         }
+    }
+
+    func reload() {
+        load(cachePolicy: .fetchIgnoringCacheData)
     }
 }

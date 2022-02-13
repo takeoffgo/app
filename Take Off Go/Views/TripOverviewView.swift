@@ -19,10 +19,12 @@ struct TripOverviewView: View {
             ForEach(quote.days.nodesWrapped()) { day in
                 Section(day.node.dateDate!.string(dateStyle: .full)) {
                     VStack(alignment: .leading) {
-                        Text(day.node.activitySummary!)
+                        Text(day.node.activitySummary!.trimmingCharacters(in: .whitespacesAndNewlines))
                     }
-                    NavigationLink(destination: PropertyView(property: accommodation(id: day.node.accommodationId!)!.property!)) {
-                        Text(accommodation(id: day.node.accommodationId!)!.property!.name!)
+                    if day.node.accommodationId != nil {
+                        NavigationLink(destination: PropertyView(property: accommodation(id: day.node.accommodationId!)!.property!)) {
+                            Text(accommodation(id: day.node.accommodationId!)!.property!.name!)
+                        }
                     }
                 }
             }
