@@ -49,6 +49,7 @@ struct TripDetail: View {
                 }.padding()
             }
         }
+        .navigationTitle(quote.hero?.title ?? "")
     }
 }
 
@@ -59,39 +60,14 @@ struct TripDetail_Previews: PreviewProvider {
     }
 }
 
-struct FullWidthImage: View {
-    var hash: String
-
-    var body: some View {
-        AsyncImage(url: URL(string: "https://cdn.takeoffgo.com/\(hash)?w=800&h=400")) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
-            case .success(let image):
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-            case .failure:
-                Image(systemName: "photo")
-            @unknown default:
-                // Since the AsyncImagePhase enum isn't frozen,
-                // we need to add this currently unused fallback
-                // to handle any new cases that might be added
-                // in the future:
-                EmptyView()
-            }
-        }
-    }
-}
-
 struct SectionButton: View {
     var label: String
     var icon: String
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(.clear)
-                .border(.black, width: 1)
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(.bar)
             VStack {
                 Image(icon)
                     .resizable()

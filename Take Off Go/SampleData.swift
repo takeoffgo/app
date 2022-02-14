@@ -61,7 +61,10 @@ struct SampleData {
                 """,
                 activityDetail: "",
                 accommodationId: "arusha",
-                quoteDayDestinationsByDayId: GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId(nodes: [])),
+                quoteDayDestinationsByDayId: GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId(nodes: [
+                    GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId.Node(order: 0, destination: GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId.Node.Destination(id: "0", name: "Arusha")),
+                    GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId.Node(order: 1, destination: GetQuoteQuery.Data.Quote.Day.Node.QuoteDayDestinationsByDayId.Node.Destination(id: "1", name: "Kilimanjaro")),
+                ])),
             GetQuoteQuery.Data.Quote.Day.Node(
                 id: "1",
                 date: "2022-12-12T00:00:00",

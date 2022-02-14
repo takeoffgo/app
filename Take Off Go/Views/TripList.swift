@@ -56,6 +56,7 @@ struct TripList_Previews: PreviewProvider {
         TripList(model: TripListViewModel(trips: [
             TripViewModel(id: "ABC123 (error)", loading: false, error: true),
             TripViewModel(id: "ABC124 (loading)", loading: true),
+            TripViewModel(id: "ABC125 (success)", quote: SampleData.quote, loading: false),
         ]))
     }
 }

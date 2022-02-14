@@ -21,6 +21,20 @@ public extension Date {
     }
 }
 
+public extension DateInterval {
+    func string(dateStyle: DateIntervalFormatter.Style? = nil, timeStyle: DateIntervalFormatter.Style? = nil) -> String {
+        let formatOut = DateIntervalFormatter()
+        if dateStyle != nil {
+            formatOut.dateStyle = dateStyle!
+        }
+        if timeStyle != nil {
+            formatOut.timeStyle = timeStyle!
+        }
+
+        return formatOut.string(from: self) ?? ""
+    }
+}
+
 public extension String {
     func date() -> Date {
         let formatIn = DateFormatter()
@@ -32,8 +46,4 @@ public extension String {
 
 public extension GetQuoteQuery.Data.Quote {
     var startDate: Date? { return self.start?.date() }
-}
-
-public extension GetQuoteQuery.Data.Quote.Day.Node {
-    var dateDate: Date? { return self.date?.date() }
 }

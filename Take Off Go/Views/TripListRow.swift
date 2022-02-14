@@ -24,12 +24,18 @@ struct TripListRow: View {
                 Label("Error", systemImage: "exclamationmark")
             }
         } else {
-            NavigationLink(destination: TripDetail(quote: trip.quote!)
-                .navigationTitle(trip.quote?.hero?.title ?? trip.id)) {
-                    VStack {
-                        Text(trip.quote?.hero?.title ?? trip.id)
+            ZStack {
+                VStack(alignment: .leading, spacing: 0) {
+                    if trip.quote?.hero?.image?.hash != nil {
+                        FullWidthImage(hash: trip.quote!.hero!.image!.hash!)
                     }
+                    Text(trip.quote?.hero?.title ?? trip.id)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
                 }
+                NavigationLink(destination: TripDetail(quote: trip.quote!)) { EmptyView() }
+                    .opacity(0)
+            }.listRowInsets(EdgeInsets())
         }
     }
 }
@@ -37,6 +43,9 @@ struct TripListRow: View {
 struct TripListRow_Previews: PreviewProvider {
     static var previews: some View {
         TripListRow(trip: TripViewModel(id: "ABC123", quote: nil))
-            .previewLayout(.fixed(width: 400, height: 60))
+            .previewLayout(.fixed(width: 400, height: 200))
+
+        TripListRow(trip: TripViewModel(id: "ABC123", quote: SampleData.quote, loading: false))
+            .previewLayout(.fixed(width: 400, height: 200))
     }
 }
