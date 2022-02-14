@@ -132,6 +132,7 @@
 		C67385FC27B4919400FF62B6 /* Take Off Go */ = {
 			isa = PBXGroup;
 			children = (
+				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 				C61ECB2227B4B6D30074C388 /* schema.json */,
 				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
 				C673860127B4919500FF62B6 /* Assets.xcassets */,
@@ -148,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				C673860427B4919500FF62B6 /* Preview Assets.xcassets */,
-				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
