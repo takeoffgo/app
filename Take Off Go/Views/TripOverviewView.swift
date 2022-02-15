@@ -20,7 +20,7 @@ struct TripOverviewView: View {
                                 .font(.caption)
                         }
 
-                        self.summary(day: day)
+                        MarkdownView(source: day.summary)
                     }
 
                     if day.property != nil {
@@ -30,14 +30,6 @@ struct TripOverviewView: View {
             }
         }
         .navigationTitle("Overview")
-    }
-
-    func summary(day: GetQuoteQuery.Data.Quote.Day.DayWrapper) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            ForEach(day.summary.split(separator: "\n"), id: \.self) { str in
-                Text(str)
-            }
-        }
     }
 
     func property(day: GetQuoteQuery.Data.Quote.Day.DayWrapper) -> some View {

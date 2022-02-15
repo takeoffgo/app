@@ -17,15 +17,12 @@ struct PropertyView: View {
                 Text(property.name!)
                     .font(.title)
                     .padding()
+
                 if property.heroMedia?.hash != nil {
                     FullWidthImage(hash: property.heroMedia!.hash!)
                 }
-                VStack(alignment: .leading, spacing: 8) {
-                    ForEach(property.summary!.split(separator: "\n"), id: \.self) { str in
-                        Text(str)
-                    }
-                }
-                .padding()
+                MarkdownView(source: property.summary)
+                    .padding()
             }
 
             if property.latitude != nil && property.longitude != nil {
