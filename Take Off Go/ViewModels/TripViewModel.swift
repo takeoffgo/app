@@ -30,11 +30,49 @@ class TripViewModel: Identifiable, ObservableObject {
                 self.quote = graphQLResult.data?.quote
 
                 self.error = self.quote == nil
+
+                if !self.error {
+                    Task {
+                        do {
+                            try await self.fetchImages()
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }
             case .failure(let error):
                 self.error = true
                 print("Failure for \(self.id)! Result: \(error)")
             }
             self.loading = false
+        }
+    }
+
+    private func fetchImages() async throws {
+        var hashes: [String] = []
+        hashes.append(contentsOf: quote?.accommodation.nodes
+            .map { $0?.property?.heroMedia?.hash }
+            .filter { $0 != nil }
+            .map { $0! }
+            ?? [])
+
+        if quote?.hero?.image?.hash != nil {
+            hashes.append(quote!.hero!.image!.hash!)
+        }
+
+        let folder = try! FileManager.default
+            .url(for: .picturesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+
+        for hash in hashes {
+            let url = URL(string: "https://cdn.takeoffgo.com/\(hash)?w=1600&h=800")!
+            let destination = folder.appendingPathComponent(hash)
+
+            if !FileManager.default.fileExists(atPath: destination.path) {
+                print("**** downloading \(url): \(destination)")
+
+                let (source, _) = try await URLSession.shared.download(from: url)
+                try FileManager.default.moveItem(at: source, to: destination)
+            }
         }
     }
 

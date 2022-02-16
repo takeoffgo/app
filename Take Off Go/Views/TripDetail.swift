@@ -7,7 +7,9 @@ struct TripDetail: View {
         ScrollView {
             VStack {
                 if quote.hero?.image?.hash != nil {
-                    FullWidthImage(hash: quote.hero!.image!.hash!)
+                    Image.fromHash(hash: quote.hero!.image!.hash!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
 
                 VStack(alignment: .leading) {
@@ -20,12 +22,12 @@ struct TripDetail: View {
                         .padding(.bottom, 20)
 
                     HStack {
-                        NavigationLink(destination: TripOverviewView(quote: self.quote)) {
+                        NavigationLink(destination: TripOverviewView(quote: quote)) {
                             SectionButton(label: "Overview", icon: "info")
                         }
                         .frame(maxWidth: .infinity)
 
-                        NavigationLink(destination: Text("days")) {
+                        NavigationLink(destination: TripDaysView(quote: quote)) {
                             SectionButton(label: "Daily breakdown", icon: "calendar-days")
                         }
                         .frame(maxWidth: .infinity)
@@ -33,12 +35,12 @@ struct TripDetail: View {
                     .fixedSize(horizontal: false, vertical: true)
 
                     HStack {
-                        NavigationLink(destination: Text("accommodation")) {
+                        NavigationLink(destination: TripAccommodationView(quote: quote)) {
                             SectionButton(label: "Accommodation", icon: "hotel")
                         }
                         .frame(maxWidth: .infinity)
 
-                        NavigationLink(destination: Text("flights")) {
+                        NavigationLink(destination: TripFlightsView(quote: quote)) {
                             SectionButton(label: "Flights", icon: "plane-departure")
                         }
                         .frame(maxWidth: .infinity)

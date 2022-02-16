@@ -12,6 +12,9 @@
 		C61ECB2327B4B6D30074C388 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C61ECB2227B4B6D30074C388 /* schema.json */; };
 		C61ECB2527B4B7180074C388 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61ECB2427B4B7180074C388 /* API.swift */; };
 		C63A08A927BA289D005D4857 /* FullWidthImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A08A827BA289D005D4857 /* FullWidthImage.swift */; };
+		C64DF73627BCF99C0088E113 /* TripFlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73527BCF99C0088E113 /* TripFlightsView.swift */; };
+		C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */; };
+		C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73927BCFC8F0088E113 /* TripDaysView.swift */; };
 		C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588DD827BC57AC0059A474 /* MarkdownView.swift */; };
 		C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D7D27B747CA000F31A1 /* TripViewModel.swift */; };
 		C6724D8627B75A64000F31A1 /* TripListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRow.swift */; };
@@ -36,6 +39,9 @@
 		C61ECB2227B4B6D30074C388 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C61ECB2427B4B7180074C388 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C63A08A827BA289D005D4857 /* FullWidthImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidthImage.swift; sourceTree = "<group>"; };
+		C64DF73527BCF99C0088E113 /* TripFlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFlightsView.swift; sourceTree = "<group>"; };
+		C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAccommodationView.swift; sourceTree = "<group>"; };
+		C64DF73927BCFC8F0088E113 /* TripDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDaysView.swift; sourceTree = "<group>"; };
 		C6588DD827BC57AC0059A474 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		C6724D7D27B747CA000F31A1 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		C6724D8527B75A64000F31A1 /* TripListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRow.swift; sourceTree = "<group>"; };
@@ -96,14 +102,17 @@
 		C6724D7C27B747B7000F31A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C63A08A827BA289D005D4857 /* FullWidthImage.swift */,
 				C6724D8927B75A9D000F31A1 /* ImportTripView.swift */,
+				C6588DD827BC57AC0059A474 /* MarkdownView.swift */,
+				C69E69FA27B8F87900FD9B12 /* PropertyView.swift */,
 				C6D4758327B4E1080093206B /* TripDetail.swift */,
+				C64DF73527BCF99C0088E113 /* TripFlightsView.swift */,
 				C6D613F427B4C0D300A77938 /* TripList.swift */,
 				C6724D8527B75A64000F31A1 /* TripListRow.swift */,
 				C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */,
-				C69E69FA27B8F87900FD9B12 /* PropertyView.swift */,
-				C63A08A827BA289D005D4857 /* FullWidthImage.swift */,
-				C6588DD827BC57AC0059A474 /* MarkdownView.swift */,
+				C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */,
+				C64DF73927BCFC8F0088E113 /* TripDaysView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D613F527B4C0D300A77938 /* TripList.swift in Sources */,
+				C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */,
 				C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */,
 				C6D4758427B4E1080093206B /* TripDetail.swift in Sources */,
 				C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */,
@@ -315,6 +325,8 @@
 				C6AAAE6627B8A91F00652796 /* Extensions.swift in Sources */,
 				C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */,
 				C63A08A927BA289D005D4857 /* FullWidthImage.swift in Sources */,
+				C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */,
+				C64DF73627BCF99C0088E113 /* TripFlightsView.swift in Sources */,
 				C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */,
 				C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */,
 				C69E69FB27B8F87900FD9B12 /* PropertyView.swift in Sources */,
@@ -447,8 +459,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;
@@ -466,6 +479,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takeoffgo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.takeoffgo.app";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -478,8 +492,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;
@@ -497,6 +512,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.takeoffgo.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.takeoffgo.app";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

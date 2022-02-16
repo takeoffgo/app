@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public extension Date {
     func string(dateStyle: DateFormatter.Style? = nil, timeStyle: DateFormatter.Style? = nil) -> String {
@@ -46,4 +47,20 @@ public extension String {
 
 public extension GetQuoteQuery.Data.Quote {
     var startDate: Date? { return self.start?.date() }
+}
+
+extension Image {
+    static func fromHash(hash: String) -> Image {
+        let folder = try! FileManager.default
+            .url(for: .picturesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+
+        let pathUrl = folder.appendingPathComponent(hash)
+
+        if FileManager.default.fileExists(atPath: pathUrl.path) {
+            return Image(uiImage: UIImage(contentsOfFile: pathUrl.path)!)
+        }
+
+        print("\(hash) doesn't exist")
+        return Image(systemName: "heart.fill")
+    }
 }

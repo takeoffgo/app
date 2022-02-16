@@ -27,7 +27,10 @@ struct TripListRow: View {
             ZStack {
                 VStack(alignment: .leading, spacing: 0) {
                     if trip.quote?.hero?.image?.hash != nil {
-                        FullWidthImage(hash: trip.quote!.hero!.image!.hash!)
+                        Image.fromHash(hash: trip.quote!.hero!.image!.hash!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+//                        FullWidthImage(hash: trip.quote!.hero!.image!.hash!)
                     }
                     Text(trip.quote?.hero?.title ?? trip.id)
                         .padding(.horizontal)

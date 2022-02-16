@@ -19,7 +19,9 @@ struct PropertyView: View {
                     .padding()
 
                 if property.heroMedia?.hash != nil {
-                    FullWidthImage(hash: property.heroMedia!.hash!)
+                    Image.fromHash(hash: property.heroMedia!.hash!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
                 MarkdownView(source: property.summary)
                     .padding()
