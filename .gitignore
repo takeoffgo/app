@@ -22,3 +22,6 @@ xcuserdata/
 
 node_modules/
 Pods/
+
+*.dSYM.zip
+*.ipa
