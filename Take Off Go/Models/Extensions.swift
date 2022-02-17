@@ -37,9 +37,12 @@ public extension DateInterval {
 }
 
 public extension String {
-    func date() -> Date? {
+    func date(timeZone: String? = nil) -> Date? {
         let formatIn = DateFormatter()
         formatIn.dateFormat = "yyyy-MM-dd'T'hh:mm:ss"
+        if !(timeZone ?? "").isEmpty {
+            formatIn.timeZone = TimeZone(identifier: timeZone!)
+        }
 
         return formatIn.date(from: self)
     }

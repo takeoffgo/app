@@ -74,9 +74,9 @@ struct TripFlightWrapper: Identifiable {
 
     var date: String {
         let departure = self.source.departure.date()
-        let arrival = self.source.arrival.date()
-        if departure != nil, arrival != nil {
-            let dateStr = departure!.string(dateStyle: .short, timeStyle: .short)
+//        let arrival = self.source.arrival.date()
+        if departure != nil {
+            let dateStr = departure!.string(dateStyle: .medium, timeStyle: .short)
 
             return dateStr
         }
