@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TripOverviewView: View {
+    @State private var detailedView = false // TODO: find a UI mechanism to toggle this
+
     var quote: GetQuoteQuery.Data.Quote
 
     var body: some View {
@@ -20,7 +22,11 @@ struct TripOverviewView: View {
                                 .font(.caption)
                         }
 
-                        MarkdownView(source: day.summary)
+                        if detailedView {
+                            MarkdownView(source: day.detail)
+                        } else {
+                            MarkdownView(source: day.summary)
+                        }
                     }
 
                     if day.property != nil {
@@ -29,7 +35,6 @@ struct TripOverviewView: View {
                 }
             }
         }
-        .navigationTitle("Overview")
     }
 
     func property(day: GetQuoteQuery.Data.Quote.Day.DayWrapper) -> some View {
@@ -77,6 +82,10 @@ extension GetQuoteQuery.Data.Quote.Day {
 
         var summary: String {
             return node.activitySummary?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        }
+
+        var detail: String {
+            return node.activityDetail?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         }
 
         var destinations: String {

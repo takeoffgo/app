@@ -28,7 +28,75 @@ struct SampleData {
             heroMedia: GetQuoteQuery.Data.Quote.Accommodation.Node.Property.HeroMedium(hash: "77515037d98cbb7ebec9c9df56e6081e"))
     }
 
-    static var trip = GetQuoteQuery.Data.Quote.Trip(name: "", agency: nil, agencyMember: nil, tripFlights: GetQuoteQuery.Data.Quote.Trip.TripFlight(nodes: []))
+    enum Countries {
+        static var australiaD = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.DepartureAirport.Country(name: "Australia")
+        static var australiaA = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.ArrivalAirport.Country(name: "Australia")
+    }
+
+    enum Airports {
+        static var melD = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.DepartureAirport(
+            id: "mel",
+            latitude: 0,
+            longitude: 0,
+            iata: "MEL",
+            icao: "YMML",
+            timezone: "Australia/Melbourne",
+            city: "Melbourne",
+            country: Countries.australiaD)
+
+        static var sydD = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.DepartureAirport(
+            id: "syd",
+            latitude: 0,
+            longitude: 0,
+            iata: "SYD",
+            icao: "YSYL",
+            timezone: "Australia/Sydney",
+            city: "Sydney",
+            country: Countries.australiaD)
+
+        static var melA = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.ArrivalAirport(
+            id: "mel",
+            latitude: 0,
+            longitude: 0,
+            iata: "MEL",
+            icao: "YMML",
+            timezone: "Australia/Melbourne",
+            city: "Melbourne",
+            country: Countries.australiaA)
+
+        static var sydA = GetQuoteQuery.Data.Quote.Trip.TripFlight.Node.ArrivalAirport(
+            id: "syd",
+            latitude: 0,
+            longitude: 0,
+            iata: "SYD",
+            icao: "YSYL",
+            timezone: "Australia/Sydney",
+            city: "Sydney",
+            country: Countries.australiaA)
+    }
+
+    static var trip = GetQuoteQuery.Data.Quote.Trip(
+        name: "",
+        agency: nil,
+        agencyMember: nil,
+        tripFlights: GetQuoteQuery.Data.Quote.Trip.TripFlight(nodes: [
+            GetQuoteQuery.Data.Quote.Trip.TripFlight.Node(
+                id: "0",
+                arrival: "2022-02-17T14:20:00",
+                carrier: "QF",
+                departure: "2022-02-17T12:00:00",
+                number: "123",
+                departureAirport: Airports.melD,
+                arrivalAirport: Airports.sydA),
+            GetQuoteQuery.Data.Quote.Trip.TripFlight.Node(
+                id: "1",
+                arrival: "2022-02-18T14:20:00",
+                carrier: "QF",
+                departure: "2022-02-18T12:00:00",
+                number: "321",
+                departureAirport: Airports.sydD,
+                arrivalAirport: Airports.melA),
+        ]))
 
     static var quote = GetQuoteQuery.Data.Quote(
         id: "0",

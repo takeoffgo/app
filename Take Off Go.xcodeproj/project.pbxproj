@@ -106,13 +106,13 @@
 				C6724D8927B75A9D000F31A1 /* ImportTripView.swift */,
 				C6588DD827BC57AC0059A474 /* MarkdownView.swift */,
 				C69E69FA27B8F87900FD9B12 /* PropertyView.swift */,
+				C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */,
+				C64DF73927BCFC8F0088E113 /* TripDaysView.swift */,
 				C6D4758327B4E1080093206B /* TripDetail.swift */,
 				C64DF73527BCF99C0088E113 /* TripFlightsView.swift */,
 				C6D613F427B4C0D300A77938 /* TripList.swift */,
 				C6724D8527B75A64000F31A1 /* TripListRow.swift */,
 				C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */,
-				C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */,
-				C64DF73927BCFC8F0088E113 /* TripDaysView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;
@@ -494,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;

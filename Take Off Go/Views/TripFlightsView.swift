@@ -23,13 +23,20 @@ struct TripFlightsView: View {
         } else {
             List {
                 ForEach(quote.trip!.flightsWrapper(), id: \.id) { flight in
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(flight.source.departureAirport!.iata!)
-                            Text("to")
-                            Text(flight.source.arrivalAirport!.iata!)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(flight.cities)
+                            Text(flight.countries)
+
+                            Text(flight.date)
+                                .font(.caption)
                         }
-                        Text("Departing \(flight.source.departure)")
+                        Spacer()
+                        Text(flight.number)
+                            .font(.system(.body, design: .monospaced))
+                            .padding(4)
+                            .background(.gray)
+                            .foregroundColor(.white)
                     }
                 }
             }
@@ -52,4 +59,36 @@ extension GetQuoteQuery.Data.Quote.Trip {
 struct TripFlightWrapper: Identifiable {
     var id: Int
     var source: GetQuoteQuery.Data.Quote.Trip.TripFlight.Node
+
+    var cities: String {
+        return "\(self.source.departureAirport!.city!) to \(self.source.arrivalAirport!.city!)"
+    }
+
+    var countries: String {
+        if self.source.departureAirport?.country?.name == self.source.arrivalAirport?.country?.name {
+            return self.source.departureAirport!.country!.name!
+        }
+
+        return "\(self.source.departureAirport!.country!.name!) to \(self.source.arrivalAirport!.country!.name!)"
+    }
+
+    var date: String {
+        let departure = self.source.departure.date()
+        let arrival = self.source.arrival.date()
+        if departure != nil, arrival != nil {
+            let dateStr = departure!.string(dateStyle: .short, timeStyle: .short)
+
+            return dateStr
+        }
+
+        return ""
+    }
+
+    var number: String {
+        if !(self.source.carrier ?? "").isEmpty, !(self.source.number ?? "").isEmpty {
+            return "\(self.source.carrier!) \(self.source.number!)"
+        }
+
+        return ""
+    }
 }

@@ -37,11 +37,11 @@ public extension DateInterval {
 }
 
 public extension String {
-    func date() -> Date {
+    func date() -> Date? {
         let formatIn = DateFormatter()
         formatIn.dateFormat = "yyyy-MM-dd'T'hh:mm:ss"
 
-        return formatIn.date(from: self)!
+        return formatIn.date(from: self)
     }
 }
 
