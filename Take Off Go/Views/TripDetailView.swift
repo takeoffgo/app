@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TripDetail: View {
+struct TripDetailView: View {
     var quote: GetQuoteQuery.Data.Quote
 
     var body: some View {
@@ -48,7 +48,7 @@ struct TripDetail: View {
 
 struct TripDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TripDetail(
+        TripDetailView(
             quote: SampleData.quote)
     }
 }

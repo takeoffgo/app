@@ -35,16 +35,22 @@ class TripViewModel: Identifiable, ObservableObject {
                     Task {
                         do {
                             try await self.fetchImages()
+                            DispatchQueue.main.async {
+                                self.loading = false
+                            }
                         } catch {
                             print(error)
                         }
                     }
+                } else {
+                    self.loading = false
                 }
+
             case .failure(let error):
                 self.error = true
+                self.loading = false
                 print("Failure for \(self.id)! Result: \(error)")
             }
-            self.loading = false
         }
     }
 
@@ -52,6 +58,12 @@ class TripViewModel: Identifiable, ObservableObject {
         var hashes: [String] = []
         hashes.append(contentsOf: quote?.accommodation.nodes
             .map { $0?.property?.heroMedia?.hash }
+            .filter { $0 != nil }
+            .map { $0! }
+            ?? [])
+        hashes.append(contentsOf: quote?.accommodation.nodes
+            .map { $0?.property?.gallery?.mediaGalleryItems.nodes.map { $0?.mediaItem?.hash } ?? [] }
+            .reduce([], +)
             .filter { $0 != nil }
             .map { $0! }
             ?? [])

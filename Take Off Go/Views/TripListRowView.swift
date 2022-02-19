@@ -36,7 +36,7 @@ struct TripListRowView: View {
                         .padding(.horizontal)
                         .padding(.vertical, 8)
                 }
-                NavigationLink(destination: TripDetail(quote: trip.quote!)) { EmptyView() }
+                NavigationLink(destination: TripDetailView(quote: trip.quote!)) { EmptyView() }
                     .opacity(0)
             }.listRowInsets(EdgeInsets())
         }

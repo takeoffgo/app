@@ -9,11 +9,18 @@ struct TripListView: View {
 
     var body: some View {
         List {
-            ForEach(model.trips) { trip in
-                TripListRowView(trip: trip)
+            if model.trips.isEmpty {
+                Text("Looks like you don't have any trips loaded.\n\nTalk to your travel consultant for help adding one.")
+                    .multilineTextAlignment(.center)
+                    .padding()
             }
-            .onDelete { indicies in
-                model.removeAt(indicies: indicies)
+            else {
+                ForEach(model.trips) { trip in
+                    TripListRowView(trip: trip)
+                }
+                .onDelete { indicies in
+                    model.removeAt(indicies: indicies)
+                }
             }
         }
         .navigationTitle("My trips")
@@ -58,5 +65,10 @@ struct TripList_Previews: PreviewProvider {
             TripViewModel(id: "ABC124 (loading)", loading: true),
             TripViewModel(id: "ABC125 (success)", quote: SampleData.quote, loading: false),
         ]))
+        .previewDisplayName("Has trips")
+
+        TripListView(model: TripListViewModel(trips: [
+        ]))
+        .previewDisplayName("No trips")
     }
 }
