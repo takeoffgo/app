@@ -82,7 +82,6 @@
 		C61ECB1C27B4B5D10074C388 /* Jambo */ = {
 			isa = PBXGroup;
 			children = (
-				C64DF73B27C0865F0088E113 /* API.swift */,
 				C6D613EF27B4BA2400A77938 /* Network.swift */,
 				C61ECB1D27B4B5F80074C388 /* GetQuote.graphql */,
 			);
@@ -144,6 +143,7 @@
 		C67385FC27B4919400FF62B6 /* Take Off Go */ = {
 			isa = PBXGroup;
 			children = (
+				C64DF73B27C0865F0088E113 /* API.swift */,
 				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 				C61ECB2227B4B6D30074C388 /* schema.json */,
 				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
