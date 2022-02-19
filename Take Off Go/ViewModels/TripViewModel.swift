@@ -61,7 +61,10 @@ class TripViewModel: Identifiable, ObservableObject {
         }
 
         let folder = try! FileManager.default
-            .url(for: .picturesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .appendingPathComponent("com.takeoffgo.app")
+
+        try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true, attributes: nil)
 
         for hash in hashes {
             let url = URL(string: "https://cdn.takeoffgo.com/\(hash)?w=1600&h=800")!

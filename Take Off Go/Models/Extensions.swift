@@ -55,7 +55,8 @@ public extension GetQuoteQuery.Data.Quote {
 extension Image {
     static func fromHash(hash: String) -> Image {
         let folder = try! FileManager.default
-            .url(for: .picturesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .appendingPathComponent("com.takeoffgo.app")
 
         let pathUrl = folder.appendingPathComponent(hash)
 
