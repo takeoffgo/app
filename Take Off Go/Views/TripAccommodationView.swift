@@ -42,31 +42,8 @@ struct TripAccommodationView_Previews: PreviewProvider {
 }
 
 extension GetQuoteQuery.Data.Quote {
-    func accommodationWrapper() -> [AccomomdationWrapper] {
-        return accommodation.nodes.enumerated().map { AccomomdationWrapper(source: $1!, quote: self) }
+    func accommodationWrapper() -> [Accomomdation] {
+        return accommodation.nodes.enumerated().map { Accomomdation(source: $1!, quote: self) }
     }
 }
 
-struct AccomomdationWrapper: Identifiable {
-    var id: Int
-    var source: GetQuoteQuery.Data.Quote.Accommodation.Node
-    var quote: GetQuoteQuery.Data.Quote
-
-    init(source: GetQuoteQuery.Data.Quote.Accommodation.Node, quote: GetQuoteQuery.Data.Quote) {
-        self.id = source.order
-        self.source = source
-        self.quote = quote
-    }
-
-    var property: GetQuoteQuery.Data.Quote.Accommodation.Node.Property { return source.property! }
-
-    var nights: Int {
-        return quote.days.nodes
-            .filter { $0?.accommodationId == source.id }
-            .count
-    }
-
-    var roomType: String! {
-        return source.roomType ?? ""
-    }
-}

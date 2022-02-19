@@ -8,36 +8,12 @@
 import MapKit
 import SwiftUI
 
-struct ImageSliderView: View {
-    var images: [String]
-
-    var body: some View {
-        if images.isEmpty {
-            EmptyView()
-        } else if images.count == 1 {
-            Image.fromHash(hash: images[0])
-                .resizable()
-                .scaledToFill()
-
-        } else {
-            TabView {
-                ForEach(images, id: \.self) { image in
-                    Image.fromHash(hash: image)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
-            .tabViewStyle(PageTabViewStyle())
-        }
-    }
-}
-
 struct PropertyView: View {
     init(property: GetQuoteQuery.Data.Quote.Accommodation.Node.Property) {
-        self.property = PropertyWrapper(source: property)
+        self.property = Property(source: property)
     }
 
-    var property: PropertyWrapper
+    var property: Property
 
     var body: some View {
         ScrollView {
@@ -75,31 +51,5 @@ struct PropertyView: View {
 struct PropertyView_Previews: PreviewProvider {
     static var previews: some View {
         PropertyView(property: SampleData.Properties.arusha)
-    }
-}
-
-struct PropertyWrapper: Identifiable {
-    var id: UUID = .init()
-
-    var source: GetQuoteQuery.Data.Quote.Accommodation.Node.Property
-
-    var name: String { self.source.name! }
-    var summary: String { self.source.summary ?? "" }
-
-    var images: [String] {
-        var ret = [self.source.heroMedia?.hash]
-        ret.append(contentsOf: self.source.gallery?.mediaGalleryItems.nodes.map { $0?.mediaItem?.hash } ?? [])
-
-        return ret.filter { !($0 ?? "").isEmpty }.map { $0! }
-    }
-
-    var location: CLLocationCoordinate2D? {
-        if self.source.latitude != nil, self.source.longitude != nil {
-            return CLLocationCoordinate2D(
-                latitude: self.source.latitude!,
-                longitude: self.source.longitude!)
-        }
-
-        return nil
     }
 }

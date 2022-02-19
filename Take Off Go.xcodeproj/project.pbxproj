@@ -13,7 +13,10 @@
 		C64DF73627BCF99C0088E113 /* TripFlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73527BCF99C0088E113 /* TripFlightsView.swift */; };
 		C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */; };
 		C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73927BCFC8F0088E113 /* TripDaysView.swift */; };
-		C64DF73C27C0865F0088E113 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73B27C0865F0088E113 /* API.swift */; };
+		C64DF73E27C098170088E113 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73D27C098170088E113 /* ImageSliderView.swift */; };
+		C64DF74027C0983D0088E113 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73F27C0983D0088E113 /* Property.swift */; };
+		C64DF74227C098AB0088E113 /* Accomomdation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF74127C098AB0088E113 /* Accomomdation.swift */; };
+		C64DF74427C099C20088E113 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF74327C099C20088E113 /* API.swift */; };
 		C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588DD827BC57AC0059A474 /* MarkdownView.swift */; };
 		C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D7D27B747CA000F31A1 /* TripViewModel.swift */; };
 		C6724D8627B75A64000F31A1 /* TripListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRowView.swift */; };
@@ -39,7 +42,10 @@
 		C64DF73527BCF99C0088E113 /* TripFlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFlightsView.swift; sourceTree = "<group>"; };
 		C64DF73727BCFC4D0088E113 /* TripAccommodationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAccommodationView.swift; sourceTree = "<group>"; };
 		C64DF73927BCFC8F0088E113 /* TripDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDaysView.swift; sourceTree = "<group>"; };
-		C64DF73B27C0865F0088E113 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "Take Off Go/API.swift"; sourceTree = SOURCE_ROOT; };
+		C64DF73D27C098170088E113 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
+		C64DF73F27C0983D0088E113 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		C64DF74127C098AB0088E113 /* Accomomdation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accomomdation.swift; sourceTree = "<group>"; };
+		C64DF74327C099C20088E113 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C6588DD827BC57AC0059A474 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		C6724D7D27B747CA000F31A1 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		C6724D8527B75A64000F31A1 /* TripListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRowView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				C6AAAE6527B8A91F00652796 /* Extensions.swift */,
+				C64DF73F27C0983D0088E113 /* Property.swift */,
+				C64DF74127C098AB0088E113 /* Accomomdation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 				C6D613F427B4C0D300A77938 /* TripListView.swift */,
 				C6724D8527B75A64000F31A1 /* TripListRowView.swift */,
 				C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */,
+				C64DF73D27C098170088E113 /* ImageSliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,7 +152,7 @@
 		C67385FC27B4919400FF62B6 /* Take Off Go */ = {
 			isa = PBXGroup;
 			children = (
-				C64DF73B27C0865F0088E113 /* API.swift */,
+				C64DF74327C099C20088E113 /* API.swift */,
 				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 				C61ECB2227B4B6D30074C388 /* schema.json */,
 				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
@@ -286,7 +295,7 @@
 		};
 		C61ECB1F27B4B64E0074C388 /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -299,7 +308,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
 		};
@@ -310,8 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64DF74227C098AB0088E113 /* Accomomdation.swift in Sources */,
 				C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */,
 				C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */,
+				C64DF74027C0983D0088E113 /* Property.swift in Sources */,
 				C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */,
 				C6D4758427B4E1080093206B /* TripDetailView.swift in Sources */,
 				C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */,
@@ -319,13 +330,14 @@
 				C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */,
 				C6C7B04A27B76EAE00E023D9 /* SampleData.swift in Sources */,
 				C6AAAE6627B8A91F00652796 /* Extensions.swift in Sources */,
+				C64DF73E27C098170088E113 /* ImageSliderView.swift in Sources */,
 				C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */,
 				C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */,
+				C64DF74427C099C20088E113 /* API.swift in Sources */,
 				C64DF73627BCF99C0088E113 /* TripFlightsView.swift in Sources */,
 				C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */,
 				C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */,
 				C69E69FB27B8F87900FD9B12 /* PropertyView.swift in Sources */,
-				C64DF73C27C0865F0088E113 /* API.swift in Sources */,
 				C6724D8627B75A64000F31A1 /* TripListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
