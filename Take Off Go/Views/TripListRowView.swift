@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TripListRow: View {
+struct TripListRowView: View {
     @ObservedObject var trip: TripViewModel
 
     var body: some View {
@@ -45,10 +45,10 @@ struct TripListRow: View {
 
 struct TripListRow_Previews: PreviewProvider {
     static var previews: some View {
-        TripListRow(trip: TripViewModel(id: "ABC123", quote: nil))
+        TripListRowView(trip: TripViewModel(id: "ABC123", quote: nil))
             .previewLayout(.fixed(width: 400, height: 200))
 
-        TripListRow(trip: TripViewModel(id: "ABC123", quote: SampleData.quote, loading: false))
+        TripListRowView(trip: TripViewModel(id: "ABC123", quote: SampleData.quote, loading: false))
             .previewLayout(.fixed(width: 400, height: 200))
     }
 }

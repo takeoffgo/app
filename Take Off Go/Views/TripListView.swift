@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TripList: View {
+struct TripListView: View {
     @ObservedObject var model = TripListViewModel()
 
     @State var importTripKey = ""
@@ -10,7 +10,7 @@ struct TripList: View {
     var body: some View {
         List {
             ForEach(model.trips) { trip in
-                TripListRow(trip: trip)
+                TripListRowView(trip: trip)
             }
             .onDelete { indicies in
                 model.removeAt(indicies: indicies)
@@ -53,7 +53,7 @@ struct TripList: View {
 
 struct TripList_Previews: PreviewProvider {
     static var previews: some View {
-        TripList(model: TripListViewModel(trips: [
+        TripListView(model: TripListViewModel(trips: [
             TripViewModel(id: "ABC123 (error)", loading: false, error: true),
             TripViewModel(id: "ABC124 (loading)", loading: true),
             TripViewModel(id: "ABC125 (success)", quote: SampleData.quote, loading: false),

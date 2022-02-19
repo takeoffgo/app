@@ -17,7 +17,7 @@
 		C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73927BCFC8F0088E113 /* TripDaysView.swift */; };
 		C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588DD827BC57AC0059A474 /* MarkdownView.swift */; };
 		C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D7D27B747CA000F31A1 /* TripViewModel.swift */; };
-		C6724D8627B75A64000F31A1 /* TripListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRow.swift */; };
+		C6724D8627B75A64000F31A1 /* TripListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRowView.swift */; };
 		C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8727B75A7E000F31A1 /* TripListViewModel.swift */; };
 		C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8927B75A9D000F31A1 /* ImportTripView.swift */; };
 		C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */; };
@@ -29,7 +29,7 @@
 		C6C7B04A27B76EAE00E023D9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7B04927B76EAE00E023D9 /* SampleData.swift */; };
 		C6D4758427B4E1080093206B /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D4758327B4E1080093206B /* TripDetail.swift */; };
 		C6D613F027B4BA2400A77938 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613EF27B4BA2400A77938 /* Network.swift */; };
-		C6D613F527B4C0D300A77938 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613F427B4C0D300A77938 /* TripList.swift */; };
+		C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613F427B4C0D300A77938 /* TripListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 		C64DF73927BCFC8F0088E113 /* TripDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDaysView.swift; sourceTree = "<group>"; };
 		C6588DD827BC57AC0059A474 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		C6724D7D27B747CA000F31A1 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
-		C6724D8527B75A64000F31A1 /* TripListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRow.swift; sourceTree = "<group>"; };
+		C6724D8527B75A64000F31A1 /* TripListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRowView.swift; sourceTree = "<group>"; };
 		C6724D8727B75A7E000F31A1 /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
 		C6724D8927B75A9D000F31A1 /* ImportTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportTripView.swift; sourceTree = "<group>"; };
 		C67385FA27B4919400FF62B6 /* Take Off Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Off Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +57,7 @@
 		C6C7B04927B76EAE00E023D9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		C6D4758327B4E1080093206B /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		C6D613EF27B4BA2400A77938 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		C6D613F427B4C0D300A77938 /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
+		C6D613F427B4C0D300A77938 /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Off Go.release.xcconfig"; path = "Target Support Files/Pods-Take Off Go/Pods-Take Off Go.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +110,8 @@
 				C64DF73927BCFC8F0088E113 /* TripDaysView.swift */,
 				C6D4758327B4E1080093206B /* TripDetail.swift */,
 				C64DF73527BCF99C0088E113 /* TripFlightsView.swift */,
-				C6D613F427B4C0D300A77938 /* TripList.swift */,
-				C6724D8527B75A64000F31A1 /* TripListRow.swift */,
+				C6D613F427B4C0D300A77938 /* TripListView.swift */,
+				C6724D8527B75A64000F31A1 /* TripListRowView.swift */,
 				C6AAAE6327B86BEE00652796 /* TripOverviewView.swift */,
 			);
 			path = Views;
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6D613F527B4C0D300A77938 /* TripList.swift in Sources */,
+				C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */,
 				C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */,
 				C6724D8827B75A7E000F31A1 /* TripListViewModel.swift in Sources */,
 				C6D4758427B4E1080093206B /* TripDetail.swift in Sources */,
@@ -330,7 +330,7 @@
 				C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */,
 				C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */,
 				C69E69FB27B8F87900FD9B12 /* PropertyView.swift in Sources */,
-				C6724D8627B75A64000F31A1 /* TripListRow.swift in Sources */,
+				C6724D8627B75A64000F31A1 /* TripListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
