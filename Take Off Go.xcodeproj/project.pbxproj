@@ -295,6 +295,7 @@
 		};
 		C61ECB1F27B4B64E0074C388 /* Generate Apollo GraphQL API */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);
