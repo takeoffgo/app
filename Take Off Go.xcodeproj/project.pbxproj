@@ -16,7 +16,7 @@
 		C64DF73E27C098170088E113 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73D27C098170088E113 /* ImageSliderView.swift */; };
 		C64DF74027C0983D0088E113 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF73F27C0983D0088E113 /* Property.swift */; };
 		C64DF74227C098AB0088E113 /* Accomomdation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF74127C098AB0088E113 /* Accomomdation.swift */; };
-		C64DF74427C099C20088E113 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF74327C099C20088E113 /* API.swift */; };
+		C64DF74627C1CF6F0088E113 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DF74527C1CF6F0088E113 /* API.swift */; };
 		C6588DD927BC57AC0059A474 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588DD827BC57AC0059A474 /* MarkdownView.swift */; };
 		C6724D7E27B747CA000F31A1 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D7D27B747CA000F31A1 /* TripViewModel.swift */; };
 		C6724D8627B75A64000F31A1 /* TripListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6724D8527B75A64000F31A1 /* TripListRowView.swift */; };
@@ -45,7 +45,7 @@
 		C64DF73D27C098170088E113 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		C64DF73F27C0983D0088E113 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		C64DF74127C098AB0088E113 /* Accomomdation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accomomdation.swift; sourceTree = "<group>"; };
-		C64DF74327C099C20088E113 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C64DF74527C1CF6F0088E113 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C6588DD827BC57AC0059A474 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
 		C6724D7D27B747CA000F31A1 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		C6724D8527B75A64000F31A1 /* TripListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRowView.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		C67385FC27B4919400FF62B6 /* Take Off Go */ = {
 			isa = PBXGroup;
 			children = (
-				C64DF74327C099C20088E113 /* API.swift */,
+				C64DF74527C1CF6F0088E113 /* API.swift */,
 				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
 				C61ECB2227B4B6D30074C388 /* schema.json */,
 				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
@@ -334,7 +334,7 @@
 				C64DF73E27C098170088E113 /* ImageSliderView.swift in Sources */,
 				C6724D8A27B75A9D000F31A1 /* ImportTripView.swift in Sources */,
 				C64DF73A27BCFC8F0088E113 /* TripDaysView.swift in Sources */,
-				C64DF74427C099C20088E113 /* API.swift in Sources */,
+				C64DF74627C1CF6F0088E113 /* API.swift in Sources */,
 				C64DF73627BCF99C0088E113 /* TripFlightsView.swift in Sources */,
 				C67385FE27B4919400FF62B6 /* TakeOffGoApp.swift in Sources */,
 				C6AAAE6427B86BEE00652796 /* TripOverviewView.swift in Sources */,

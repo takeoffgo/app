@@ -20,7 +20,7 @@ struct Property: Identifiable {
         var ret = [self.source.heroMedia?.hash]
         ret.append(contentsOf: self.source.gallery?.mediaGalleryItems.nodes.map { $0?.mediaItem?.hash } ?? [])
 
-        return ret.filter { !($0 ?? "").isEmpty }.map { $0! }
+        return Array(Set(ret.filter { !($0 ?? "").isEmpty }.map { $0! }))
     }
 
     var location: CLLocationCoordinate2D? {
