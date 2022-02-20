@@ -11,6 +11,7 @@ struct TripListView: View {
         List {
             if model.trips.isEmpty {
                 Text("Looks like you don't have any trips loaded.\n\nTalk to your travel consultant for help adding one.")
+                    .fixedSize(horizontal: true, vertical: false)
                     .multilineTextAlignment(.center)
                     .padding()
             }

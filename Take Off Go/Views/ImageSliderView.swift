@@ -24,6 +24,8 @@ struct ImageSliderView: View {
                     Image.fromHash(hash: image)
                         .resizable()
                         .scaledToFill()
+                        .listRowInsets(.none)
+                        .clipped()
                 }
             }
             .tabViewStyle(PageTabViewStyle())

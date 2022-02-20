@@ -31,7 +31,7 @@ struct TripDetailView: View {
             }
             TripOverviewView(quote: quote).tabItem {
                 Image(systemName: "calendar")
-                Text("Daily breakdown")
+                Text("Itinerary")
             }
             TripAccommodationView(quote: quote).tabItem {
                 Image(systemName: "house")
