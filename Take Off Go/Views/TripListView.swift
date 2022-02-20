@@ -56,6 +56,13 @@ struct TripListView: View {
         .refreshable {
             model.refresh()
         }
+        .onOpenURL { url in
+            if url.pathComponents.count == 3 && url.pathComponents[1] == "itinerary" {
+                let key = url.pathComponents[2]
+
+                model.addTrip(key: key)
+            }
+        }
     }
 }
 

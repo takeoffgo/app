@@ -13,6 +13,13 @@ struct TakeOffGoApp: App {
         ])
     }
 
+    public func application(_ application: UIApplication,
+                            continue userActivity: NSUserActivity,
+                            restorationHandler: @escaping ([Any]?) -> Void) -> Bool
+    {
+        return true
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
