@@ -31,6 +31,7 @@ struct TripListView: View {
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Import") {
                                     model.addTrip(key: importTripKey)
+                                    activeKey = importTripKey
                                     isAdding = false
                                     importTripKey = ""
                                 }
