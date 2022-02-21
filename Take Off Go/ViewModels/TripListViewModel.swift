@@ -25,7 +25,8 @@ final class TripListViewModel: ObservableObject {
         }
     }
 
-    func addTrip(key: String) {
+    @discardableResult
+    func addTrip(key: String) -> TripViewModel {
         let keyNormalised = key.uppercased()
 
         var tripKeys = UserDefaults.standard.stringArray(forKey: "trips") ?? []
@@ -37,6 +38,8 @@ final class TripListViewModel: ObservableObject {
         UserDefaults.standard.set(tripKeys, forKey: "trips")
 
         fetchTrips()
+
+        return trips.first(where: { $0.id == key })!
     }
 
     func removeAt(indicies: IndexSet) {

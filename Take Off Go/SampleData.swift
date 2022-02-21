@@ -226,4 +226,10 @@ struct SampleData {
                 property: Properties.fourSeasons),
 
         ]))
+
+    enum Trips {
+        static var loading = TripViewModel(id: "loading", quote: nil, loading: true, error: false)
+        static var error = TripViewModel(id: "error", quote: nil, loading: false, error: true)
+        static var success = TripViewModel(id: "success", quote: quote, loading: false, error: false)
+    }
 }

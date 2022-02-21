@@ -6,62 +6,79 @@ struct TripListView: View {
     @State var importTripKey = ""
 
     @State var isAdding = false
+    @State var activeKey = ""
 
     var body: some View {
-        List {
-            if model.trips.isEmpty {
-                Text("Looks like you don't have any trips loaded.\n\nTalk to your travel consultant for help adding one.")
-                    .fixedSize(horizontal: true, vertical: false)
-                    .multilineTextAlignment(.center)
-                    .padding()
-            }
-            else {
-                ForEach(model.trips) { trip in
-                    TripListRowView(trip: trip)
+        content()
+            .navigationTitle("My trips")
+            .toolbar {
+                Button(action: { isAdding = true }) {
+                    Image(systemName: "plus")
                 }
-                .onDelete { indicies in
-                    model.removeAt(indicies: indicies)
-                }
+                .accessibilityLabel("Import trip")
             }
-        }
-        .navigationTitle("My trips")
-        .toolbar {
-            Button(action: { isAdding = true }) {
-                Image(systemName: "plus")
-            }
-            .accessibilityLabel("Import trip")
-        }
-        .sheet(isPresented: $isAdding) {
-            NavigationView {
-                ImportTripView(importTripKey: $importTripKey)
-                    .navigationTitle("Import trip")
-                    .toolbar {
-                        ToolbarItem(placement: .cancellationAction) {
-                            Button("Cancel") {
-                                isAdding = false
-                                importTripKey = ""
+            .sheet(isPresented: $isAdding) {
+                NavigationView {
+                    ImportTripView(importTripKey: $importTripKey)
+                        .navigationTitle("Import trip")
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Cancel") {
+                                    isAdding = false
+                                    importTripKey = ""
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Import") {
+                                    model.addTrip(key: importTripKey)
+                                    isAdding = false
+                                    importTripKey = ""
+                                }
+                                .disabled(importTripKey.isEmpty)
                             }
                         }
-                        ToolbarItem(placement: .confirmationAction) {
-                            Button("Import") {
-                                model.addTrip(key: importTripKey)
-                                isAdding = false
-                                importTripKey = ""
-                            }
-                            .disabled(importTripKey.isEmpty)
+                }
+            }
+            .refreshable {
+                model.refresh()
+            }
+            .onOpenURL { url in
+                if url.pathComponents.count == 3 && url.pathComponents[1] == "itinerary" {
+                    let key = url.pathComponents[2]
+
+                    model.addTrip(key: key)
+                    activeKey = key
+                }
+            }
+    }
+
+    func content() -> AnyView {
+        if model.trips.isEmpty {
+            return AnyView(Text("Looks like you don't have any trips loaded.\n\nTalk to your travel consultant for help adding one.")
+                .fixedSize(horizontal: false, vertical: false)
+                .multilineTextAlignment(.center)
+                .padding()
+            )
+        }
+        else {
+            return AnyView(VStack {
+                if !activeKey.isEmpty {
+                    NavigationLink("Hidden link", isActive: .constant(true)) {
+                        TripDetailView(trip: model.trips.first(where: { $0.id == activeKey })!)
+                            .onDisappear(perform: { activeKey = "" })
+                    }.hidden()
+                }
+                List {
+                    ForEach(model.trips) { trip in
+                        TripListRowView(trip: trip)
+                    }
+                    .onDelete { indicies in
+                        withAnimation {
+                            model.removeAt(indicies: indicies)
                         }
                     }
-            }
-        }
-        .refreshable {
-            model.refresh()
-        }
-        .onOpenURL { url in
-            if url.pathComponents.count == 3 && url.pathComponents[1] == "itinerary" {
-                let key = url.pathComponents[2]
-
-                model.addTrip(key: key)
-            }
+                }
+            })
         }
     }
 }
