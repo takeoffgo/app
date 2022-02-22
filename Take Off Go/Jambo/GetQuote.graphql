@@ -108,6 +108,11 @@ query GetQuote($key: String!) {
 		  id
 		  name
 		  summary
+		  city
+		  country {
+			id
+			name
+		  }
 		  latitude
 		  longitude
 		  heroMedia {

@@ -15,6 +15,8 @@ struct SampleData {
             id: "arusha",
             name: "Arusha Coffee Lodge",
             summary: "Located in the middle of a verdant coffee plantation, Arusha Coffee Lodge is a sanctuary of aromatic tranquillity and a welcome retreat after a long international flight, or the dust and excitement of a thrilling bush safari.",
+            city: "Arusha",
+            country: GetQuoteQuery.Data.Quote.Accommodation.Node.Property.Country(id: "tanzania", name: "Tanzania"),
             latitude: -3.375,
             longitude: 36.675,
             heroMedia: GetQuoteQuery.Data.Quote.Accommodation.Node.Property.HeroMedium(hash: "5b92b3767c8c206655ca3d410a88ca97"))

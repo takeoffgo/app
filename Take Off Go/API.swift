@@ -138,6 +138,12 @@ public final class GetQuoteQuery: GraphQLQuery {
               id
               name
               summary
+              city
+              country {
+                __typename
+                id
+                name
+              }
               latitude
               longitude
               heroMedia {
@@ -1690,6 +1696,8 @@ public final class GetQuoteQuery: GraphQLQuery {
                 GraphQLField("id", type: .nonNull(.scalar(String.self))),
                 GraphQLField("name", type: .scalar(String.self)),
                 GraphQLField("summary", type: .scalar(String.self)),
+                GraphQLField("city", type: .scalar(String.self)),
+                GraphQLField("country", type: .object(Country.selections)),
                 GraphQLField("latitude", type: .scalar(Double.self)),
                 GraphQLField("longitude", type: .scalar(Double.self)),
                 GraphQLField("heroMedia", type: .object(HeroMedium.selections)),
@@ -1703,8 +1711,8 @@ public final class GetQuoteQuery: GraphQLQuery {
               self.resultMap = unsafeResultMap
             }
 
-            public init(id: String, name: String? = nil, summary: String? = nil, latitude: Double? = nil, longitude: Double? = nil, heroMedia: HeroMedium? = nil, gallery: Gallery? = nil) {
-              self.init(unsafeResultMap: ["__typename": "Property", "id": id, "name": name, "summary": summary, "latitude": latitude, "longitude": longitude, "heroMedia": heroMedia.flatMap { (value: HeroMedium) -> ResultMap in value.resultMap }, "gallery": gallery.flatMap { (value: Gallery) -> ResultMap in value.resultMap }])
+            public init(id: String, name: String? = nil, summary: String? = nil, city: String? = nil, country: Country? = nil, latitude: Double? = nil, longitude: Double? = nil, heroMedia: HeroMedium? = nil, gallery: Gallery? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Property", "id": id, "name": name, "summary": summary, "city": city, "country": country.flatMap { (value: Country) -> ResultMap in value.resultMap }, "latitude": latitude, "longitude": longitude, "heroMedia": heroMedia.flatMap { (value: HeroMedium) -> ResultMap in value.resultMap }, "gallery": gallery.flatMap { (value: Gallery) -> ResultMap in value.resultMap }])
             }
 
             public var __typename: String {
@@ -1743,6 +1751,25 @@ public final class GetQuoteQuery: GraphQLQuery {
               }
             }
 
+            public var city: String? {
+              get {
+                return resultMap["city"] as? String
+              }
+              set {
+                resultMap.updateValue(newValue, forKey: "city")
+              }
+            }
+
+            /// Reads a single `Country` that is related to this `Property`.
+            public var country: Country? {
+              get {
+                return (resultMap["country"] as? ResultMap).flatMap { Country(unsafeResultMap: $0) }
+              }
+              set {
+                resultMap.updateValue(newValue?.resultMap, forKey: "country")
+              }
+            }
+
             public var latitude: Double? {
               get {
                 return resultMap["latitude"] as? Double
@@ -1778,6 +1805,55 @@ public final class GetQuoteQuery: GraphQLQuery {
               }
               set {
                 resultMap.updateValue(newValue?.resultMap, forKey: "gallery")
+              }
+            }
+
+            public struct Country: GraphQLSelectionSet {
+              public static let possibleTypes: [String] = ["Country"]
+
+              public static var selections: [GraphQLSelection] {
+                return [
+                  GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("id", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("name", type: .scalar(String.self)),
+                ]
+              }
+
+              public private(set) var resultMap: ResultMap
+
+              public init(unsafeResultMap: ResultMap) {
+                self.resultMap = unsafeResultMap
+              }
+
+              public init(id: String, name: String? = nil) {
+                self.init(unsafeResultMap: ["__typename": "Country", "id": id, "name": name])
+              }
+
+              public var __typename: String {
+                get {
+                  return resultMap["__typename"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "__typename")
+                }
+              }
+
+              public var id: String {
+                get {
+                  return resultMap["id"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "id")
+                }
+              }
+
+              public var name: String? {
+                get {
+                  return resultMap["name"] as? String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "name")
+                }
               }
             }
 

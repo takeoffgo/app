@@ -32,4 +32,14 @@ struct Property: Identifiable {
 
         return nil
     }
+
+    var locationStr: String {
+        if self.source.city != nil, self.source.country?.name != nil {
+            return "\(self.source.city!), \(self.source.country!.name!)"
+        } else if self.source.country?.name != nil {
+            return self.source.country!.name!
+        }
+
+        return ""
+    }
 }

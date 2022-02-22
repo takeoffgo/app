@@ -18,17 +18,20 @@ struct PropertyView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(property.name)
-                    .font(.title)
-                    .padding()
-
                 ImageSliderView(images: property.images)
                     .aspectRatio(16 / 9, contentMode: .fill)
 
-                if !property.summary.isEmpty {
-                    MarkdownView(source: property.summary)
-                        .padding()
-                }
+                VStack(alignment: .leading) {
+                    Text(property.name)
+                        .font(.headline)
+                    Text(property.locationStr)
+                        .font(.caption)
+
+                    if !property.summary.isEmpty {
+                        MarkdownView(source: property.summary)
+                            .padding(.top, 1)
+                    }
+                }.padding()
             }
 
             if property.location != nil {
@@ -44,7 +47,7 @@ struct PropertyView: View {
                     .frame(height: 400)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(property.name)
     }
 }
 
