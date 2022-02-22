@@ -27,15 +27,13 @@ class TripViewModel: Identifiable, ObservableObject {
         Network.shared.apollo.fetch(query: GetQuoteQuery(key: id), cachePolicy: cachePolicy) { result in
             switch result {
             case .success(let graphQLResult):
-                self.quote = graphQLResult.data?.quote
-
-                self.error = self.quote == nil
-
-                if !self.error {
+                if graphQLResult.data?.quote != nil {
                     Task {
                         do {
-                            try await self.fetchImages()
+                            try await self.fetchImages(quote: graphQLResult.data!.quote!)
                             DispatchQueue.main.async {
+                                self.quote = graphQLResult.data!.quote!
+                                self.error = false
                                 self.loading = false
                             }
                         } catch {
@@ -44,6 +42,7 @@ class TripViewModel: Identifiable, ObservableObject {
                     }
                 } else {
                     self.loading = false
+                    self.error = true
                 }
 
             case .failure(let error):
@@ -54,22 +53,22 @@ class TripViewModel: Identifiable, ObservableObject {
         }
     }
 
-    private func fetchImages() async throws {
+    private func fetchImages(quote: GetQuoteQuery.Data.Quote) async throws {
         var hashes: [String] = []
-        hashes.append(contentsOf: quote?.accommodation.nodes
+        hashes.append(contentsOf: quote.accommodation.nodes
             .map { $0?.property?.heroMedia?.hash }
             .filter { $0 != nil }
             .map { $0! }
-            ?? [])
-        hashes.append(contentsOf: quote?.accommodation.nodes
+        )
+        hashes.append(contentsOf: quote.accommodation.nodes
             .map { $0?.property?.gallery?.mediaGalleryItems.nodes.map { $0?.mediaItem?.hash } ?? [] }
             .reduce([], +)
             .filter { $0 != nil }
             .map { $0! }
-            ?? [])
+        )
 
-        if quote?.hero?.image?.hash != nil {
-            hashes.append(quote!.hero!.image!.hash!)
+        if quote.hero?.image?.hash != nil {
+            hashes.append(quote.hero!.image!.hash!)
         }
 
         let folder = try! FileManager.default
