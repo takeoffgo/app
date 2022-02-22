@@ -16,16 +16,13 @@ struct ImageSliderView: View {
         } else if images.count == 1 {
             Image.fromHash(hash: images[0])
                 .resizable()
-                .scaledToFill()
 
         } else {
             TabView {
                 ForEach(images, id: \.self) { image in
                     Image.fromHash(hash: image)
                         .resizable()
-                        .scaledToFill()
                         .listRowInsets(.none)
-                        .clipped()
                 }
             }
             .tabViewStyle(PageTabViewStyle())

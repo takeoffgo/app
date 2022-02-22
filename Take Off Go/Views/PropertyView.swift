@@ -23,7 +23,7 @@ struct PropertyView: View {
                     .padding()
 
                 ImageSliderView(images: property.images)
-                    .frame(height: 300)
+                    .aspectRatio(16 / 9, contentMode: .fill)
 
                 if !property.summary.isEmpty {
                     MarkdownView(source: property.summary)

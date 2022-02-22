@@ -61,10 +61,13 @@ extension Image {
         let pathUrl = folder.appendingPathComponent(hash)
 
         if FileManager.default.fileExists(atPath: pathUrl.path) {
-            return Image(uiImage: UIImage(contentsOfFile: pathUrl.path)!)
+            let uiImage = UIImage(contentsOfFile: pathUrl.path)
+            if uiImage != nil {
+                return Image(uiImage: uiImage!)
+            }
         }
 
-        print("\(hash) doesn't exist")
+        print("\(hash) doesn't exist at \(pathUrl.path)")
         return Image(systemName: "heart.fill")
     }
 }

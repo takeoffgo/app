@@ -66,7 +66,6 @@ struct TripListView: View {
                 if !activeKey.isEmpty {
                     NavigationLink("Hidden link", isActive: .constant(true)) {
                         TripDetailView(trip: model.trips.first(where: { $0.id == activeKey })!)
-                            .onDisappear(perform: { activeKey = "" })
                     }.hidden()
                 }
                 List {

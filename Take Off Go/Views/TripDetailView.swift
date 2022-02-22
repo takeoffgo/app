@@ -10,7 +10,7 @@ struct TripDetailView: View {
 
     func content() -> AnyView {
         if trip.loading {
-            return AnyView(HStack {
+            return AnyView(VStack(spacing: 8) {
                 ProgressView()
                 Text("Loading trip \(trip.id)")
             })
@@ -19,11 +19,11 @@ struct TripDetailView: View {
         } else {
             return AnyView(TabView {
                 ScrollView {
-                    VStack {
+                    VStack(alignment: .leading) {
                         if trip.quote!.hero?.image?.hash != nil {
                             Image.fromHash(hash: trip.quote!.hero!.image!.hash!)
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(16 / 9, contentMode: .fill)
                         }
 
                         VStack(alignment: .leading) {

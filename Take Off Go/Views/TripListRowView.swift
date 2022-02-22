@@ -29,8 +29,7 @@ struct TripListRowView: View {
                     if trip.quote?.hero?.image?.hash != nil {
                         Image.fromHash(hash: trip.quote!.hero!.image!.hash!)
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
-//                        FullWidthImage(hash: trip.quote!.hero!.image!.hash!)
+                            .aspectRatio(16 / 9, contentMode: .fit)
                     }
                     Text(trip.quote?.hero?.title ?? trip.id)
                         .padding(.horizontal)

@@ -79,7 +79,7 @@ class TripViewModel: Identifiable, ObservableObject {
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true, attributes: nil)
 
         for hash in hashes {
-            let url = URL(string: "https://cdn.takeoffgo.com/\(hash)?w=1600&h=800")!
+            let url = URL(string: "https://cdn.takeoffgo.com/\(hash)?w=1600&h=900")!
             let destination = folder.appendingPathComponent(hash)
 
             if !FileManager.default.fileExists(atPath: destination.path) {
@@ -87,6 +87,8 @@ class TripViewModel: Identifiable, ObservableObject {
 
                 let (source, _) = try await URLSession.shared.download(from: url)
                 try FileManager.default.moveItem(at: source, to: destination)
+            } else {
+                print("**** skipping \(url): \(destination)")
             }
         }
     }
