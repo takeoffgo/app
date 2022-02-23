@@ -17,25 +17,30 @@ struct TripDetailView: View {
         } else if trip.error {
             return AnyView(Label("An error occurred loading trip \(trip.id)", systemImage: "exclamationmark"))
         } else {
+            let quote = Quote(source: trip.quote!)
             return AnyView(TabView {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        if trip.quote!.hero?.image?.hash != nil {
-                            Image.fromHash(hash: trip.quote!.hero!.image!.hash!)
+                        if !quote.heroImage.isEmpty {
+                            Image.fromHash(hash: quote.heroImage)
                                 .resizable()
                                 .aspectRatio(16 / 9, contentMode: .fill)
                         }
 
                         VStack(alignment: .leading) {
-                            if !(trip.quote!.hero?.subtitle?.isEmpty ?? true) {
-                                Text(trip.quote!.hero!.subtitle!).font(.subheadline)
-                                    .padding(.bottom, 5)
+                            if !quote.title.isEmpty {
+                                Text(quote.title)
+                                    .font(.headline)
                             }
-                            Text("Starts \(trip.quote!.startDate?.string(dateStyle: .full) ?? "soon?") for \(String(trip.quote!.duration!)) days")
-                                .font(.caption)
-                                .padding(.bottom, 20)
 
-                            Spacer()
+                            Text(quote.caption)
+                                .font(.caption)
+
+                            if !quote.subtitle.isEmpty {
+                                MarkdownView(source: quote.subtitle)
+                                    .padding(.top, 1)
+                            }
+
                         }.padding()
                     }
                 }.tabItem {

@@ -31,6 +31,7 @@
 		C6D4758427B4E1080093206B /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D4758327B4E1080093206B /* TripDetailView.swift */; };
 		C6D613F027B4BA2400A77938 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613EF27B4BA2400A77938 /* Network.swift */; };
 		C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613F427B4C0D300A77938 /* TripListView.swift */; };
+		C6EDF3AD27C5D3C6009ABB99 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EDF3AC27C5D3C6009ABB99 /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		C6D4758327B4E1080093206B /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		C6D613EF27B4BA2400A77938 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C6D613F427B4C0D300A77938 /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		C6EDF3AC27C5D3C6009ABB99 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Off Go.release.xcconfig"; path = "Target Support Files/Pods-Take Off Go/Pods-Take Off Go.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				C6AAAE6527B8A91F00652796 /* Extensions.swift */,
 				C64DF73F27C0983D0088E113 /* Property.swift */,
 				C64DF74127C098AB0088E113 /* Accomomdation.swift */,
+				C6EDF3AC27C5D3C6009ABB99 /* Quote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6EDF3AD27C5D3C6009ABB99 /* Quote.swift in Sources */,
 				C64DF74227C098AB0088E113 /* Accomomdation.swift in Sources */,
 				C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */,
 				C64DF73827BCFC4D0088E113 /* TripAccommodationView.swift in Sources */,
@@ -468,7 +472,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Take Off Go/Take Off Go.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;
@@ -502,7 +506,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Take Off Go/Take Off Go.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Take Off Go/Preview Content\"";
 				DEVELOPMENT_TEAM = Z3775ZEQGR;
 				ENABLE_PREVIEWS = YES;
