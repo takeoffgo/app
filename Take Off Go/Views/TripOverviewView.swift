@@ -120,12 +120,15 @@ extension GetQuoteQuery.Data.Quote.Day {
                 return false
             }
 
-            let prev = quote.days.nodes[startIndex - 1]
+            let prev = quote.days.nodes[startIndex - 1]!
 
-            return node.accommodationId == prev?.accommodationId &&
-                (node.activitySummary == prev?.activitySummary ||
-                    prev?.activitySummary?.isEmpty == true ||
-                    node.activitySummary?.isEmpty == true)
+            let ret = node.accommodationId == prev.accommodationId &&
+                (node.activitySummary == prev.activitySummary ||
+                    (prev.activitySummary?.isEmpty == true &&
+                        node.activitySummary?.isEmpty == true))
+
+            print("skip?: \(ret), idx: \(startIndex)")
+            return ret
         }
 
         private func dateRange() -> DateInterval? {
@@ -143,14 +146,14 @@ extension GetQuoteQuery.Data.Quote.Day {
             guard let startIndex = quote.days.nodes.firstIndex(where: { $0?.id == node.id }) else { return 1 }
             var ret = 1
 
-            for i in startIndex ..< quote.days.nodes.count {
+            for i in startIndex + 1 ..< quote.days.nodes.count {
                 let n = quote.days.nodes[i]
 
                 if n?.accommodationId != node.accommodationId {
                     break
                 }
 
-                if n!.activitySummary?.isEmpty == true {
+                if n?.activitySummary == summary {
                     ret = ret + 1
                 }
             }

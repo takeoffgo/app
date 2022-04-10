@@ -32,6 +32,7 @@
 		C6D613F027B4BA2400A77938 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613EF27B4BA2400A77938 /* Network.swift */; };
 		C6D613F527B4C0D300A77938 /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D613F427B4C0D300A77938 /* TripListView.swift */; };
 		C6EDF3AD27C5D3C6009ABB99 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EDF3AC27C5D3C6009ABB99 /* Quote.swift */; };
+		C6EDF3AF27C5E3DA009ABB99 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EDF3AE27C5E3DA009ABB99 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		C6D613EF27B4BA2400A77938 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C6D613F427B4C0D300A77938 /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		C6EDF3AC27C5D3C6009ABB99 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		C6EDF3AE27C5E3DA009ABB99 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E34CCE623802AD185FB2BD1D /* Pods-Take Off Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Off Go.release.xcconfig"; path = "Target Support Files/Pods-Take Off Go/Pods-Take Off Go.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,9 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				C64DF74727C1EB9D0088E113 /* Take Off Go.entitlements */,
+				C61ECB2227B4B6D30074C388 /* schema.json */,
+				C6EDF3AE27C5E3DA009ABB99 /* Launch Screen.storyboard */,
 				C64DF74527C1CF6F0088E113 /* API.swift */,
 				C6C7B04927B76EAE00E023D9 /* SampleData.swift */,
-				C61ECB2227B4B6D30074C388 /* schema.json */,
 				C67385FD27B4919400FF62B6 /* TakeOffGoApp.swift */,
 				C673860127B4919500FF62B6 /* Assets.xcassets */,
 				C61ECB1C27B4B5D10074C388 /* Jambo */,
@@ -249,6 +252,7 @@
 				C61ECB2327B4B6D30074C388 /* schema.json in Resources */,
 				C673860527B4919500FF62B6 /* Preview Assets.xcassets in Resources */,
 				C61ECB1E27B4B5F80074C388 /* GetQuote.graphql in Resources */,
+				C6EDF3AF27C5E3DA009ABB99 /* Launch Screen.storyboard in Resources */,
 				C673860227B4919500FF62B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +484,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -514,6 +519,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

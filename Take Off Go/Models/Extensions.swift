@@ -50,6 +50,7 @@ public extension String {
 
 public extension GetQuoteQuery.Data.Quote {
     var startDate: Date? { return self.start?.date() }
+    var endDate: Date? { return self.startDate != nil && self.duration != nil ? Calendar.current.date(byAdding: .day, value: self.duration!, to: self.startDate!) : nil }
 }
 
 extension Image {

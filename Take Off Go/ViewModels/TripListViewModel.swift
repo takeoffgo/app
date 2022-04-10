@@ -18,10 +18,34 @@ final class TripListViewModel: ObservableObject {
 
     @Published var trips = [TripViewModel]()
 
+    @Published var past = [TripViewModel]()
+    @Published var present = [TripViewModel]()
+    @Published var future = [TripViewModel]()
+
     private func fetchTrips() {
         let tripKeys = UserDefaults.standard.stringArray(forKey: "trips") ?? []
         trips = tripKeys.enumerated().map { _, k in
             TripViewModel(id: k)
+        }
+
+        past = trips.filter {
+            $0.quote != nil &&
+                $0.quote!.endDate != nil &&
+                $0.quote!.endDate! < Date.now
+        }
+
+        present = trips.filter {
+            $0.quote != nil &&
+                $0.quote!.startDate != nil &&
+                $0.quote!.endDate != nil &&
+                $0.quote!.startDate! < Date.now &&
+                $0.quote!.endDate! > Date.now
+        }
+
+        future = trips.filter {
+            $0.quote != nil &&
+                $0.quote!.startDate != nil &&
+                $0.quote!.startDate! > Date.now
         }
     }
 

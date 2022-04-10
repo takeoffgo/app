@@ -32,11 +32,16 @@ struct TripFlightsView: View {
                                 .font(.caption)
                         }
                         Spacer()
-                        Text(flight.number)
-                            .font(.system(.body, design: .monospaced))
-                            .padding(4)
-                            .background(.gray)
-                            .foregroundColor(.white)
+                        if flight.number.isEmpty {
+                            EmptyView()
+
+                        } else {
+                            Text(flight.number)
+                                .font(.system(.body, design: .monospaced))
+                                .padding(4)
+                                .background(.gray)
+                                .foregroundColor(.white)
+                        }
                     }
                 }
             }
