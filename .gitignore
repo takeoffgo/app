@@ -25,3 +25,5 @@ Pods/
 
 *.dSYM.zip
 *.ipa
+
+AuthKey_*

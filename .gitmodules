@@ -1,0 +1,3 @@
+[submodule "app-certs"]
+	path = app-certs
+	url = git@github.com:takeoffgo/app-certs.git
